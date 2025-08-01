@@ -4,8 +4,8 @@ const fetch = require('node-fetch');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-const XANO_LOOKUP_ENDPOINT = 'https://api.byfloo.com/api:eqgvB67E/imgget-lookup';
-const API_KEY = 'your-xano-api-key';
+const XANO_LOOKUP_ENDPOINT = process.env.XANO_URL;
+const API_KEY = process.env.XANO_KEY;
 
 app.get('/imgget', async (req, res) => {
   const id = req.query.id;
